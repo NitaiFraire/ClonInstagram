@@ -30,3 +30,15 @@ Route::post('/user/update', 'UserController@update')->name('user.update');
 
 // ruta para mosrar imagen
 Route::get('/user/avatar/{fileName}', 'UserController@getImage')->name('user.avatar');
+
+// ruta para subir imagenes
+Route::get('/uploadImage', 'ImageController@create')->name('image.create');
+
+// ruta par guardar imagen
+Route::post('/image/save', 'ImageController@save')->name('image.save');
+
+// ruta para mostrar imagen
+Route::get('/image/file/{fileName}', 'ImageController@getImage')->name('image.file');
+
+// ruta para detalle imagen
+Route::get('/image/{id}', 'ImageController@detail')->name('image.detail');

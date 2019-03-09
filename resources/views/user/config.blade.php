@@ -4,14 +4,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                @if(session('message'))
-                    <div class="alert alert-success">
-                        <h3>{{ session('message') }}</h3> 
-                    </div>
-                @endif
+                @include('includes.message')
                 <div class="card">
                     <div class="card-header">configuración de mi cuenta</div>
-    
                     <div class="card-body">
                             <form method="POST" action="{{ route('user.update') }}" enctype="multipart/form-data">
                             @csrf

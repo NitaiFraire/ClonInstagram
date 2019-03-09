@@ -3,7 +3,8 @@
     width: 80px;
 }
 
-.navbar .container-avatar{
+.navbar .container-avatar,
+.pub_image .container-avatar{
 
     width: 35px;
     height: 35px;
@@ -11,8 +12,46 @@
     overflow: hidden;
 }
 
-.navbar .container-avatar img{
+.navbar .container-avatar img,
+.pub_image .container-avatar img{
 
     height: 100%;
     width: 100%;
+}
+
+.pub_image{
+
+    font-weight: bold;
+    line-height: 35px;
+    
+}
+
+.pub_image{
+
+    margin-bottom: 2rem;
+}
+
+ .image_container img{
+
+    height: 300px;
+}
+
+.likes img{
+
+    width: 20px;
+}
+
+.enlaceImg{
+
+    color: black;
+}
+
+.enlaceImg:hover{
+
+    color: gray;
+}
+
+.nickname{
+
+    color: gray;
 }
