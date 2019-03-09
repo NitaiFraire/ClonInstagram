@@ -21,3 +21,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+// Rutas formulario de configuracion
+Route::get('/configuracion', 'UserController@config')->name('config');
+
+// Ruta actualizacion de informacion
+Route::post('/user/update', 'UserController@update')->name('user.update');
+
+// ruta para mosrar imagen
+Route::get('/user/avatar/{fileName}', 'UserController@getImage')->name('user.avatar');
