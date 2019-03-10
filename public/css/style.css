@@ -55,3 +55,8 @@
 
     color: gray;
 }
+
+ .comment p{
+
+    margin-bottom: 0;
+}

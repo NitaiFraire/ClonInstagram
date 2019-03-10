@@ -14,7 +14,7 @@ class Image extends Model{
     public function comments(){
         
         // relacion con la tabla de comentarios
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\Comment')->orderBy('id', 'desc');
     }
 
     // relacion one to many

@@ -12,6 +12,7 @@
 */
 
 use App\Image;
+//use Symfony\Component\Routing\Annotation\Route;
 
 Route::get('/', function () {
 
@@ -42,3 +43,9 @@ Route::get('/image/file/{fileName}', 'ImageController@getImage')->name('image.fi
 
 // ruta para detalle imagen
 Route::get('/image/{id}', 'ImageController@detail')->name('image.detail');
+
+// ruta para recibir comentario
+Route::post('/comment/save', 'CommentController@save')->name('comment.save');
+
+// ruta para elimiar comentario
+Route::get('/comment/delete/{id}', 'CommentController@delete')->name('comment.delete');
