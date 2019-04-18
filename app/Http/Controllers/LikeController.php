@@ -7,6 +7,17 @@ use App\Like;
 
 class LikeController extends Controller
 {
+
+    public function index(){
+        
+        $user = \Auth::user();
+        $likes = Like::where('user_id', $user->id)->orderBy('id', 'desc')->paginate(5);
+
+        return view('like.index',[
+
+            'likes' => $likes
+        ]);
+    }
     
     public function __construct(){
         
@@ -72,4 +83,6 @@ class LikeController extends Controller
             ]);
         }
     }
+
+
 }
