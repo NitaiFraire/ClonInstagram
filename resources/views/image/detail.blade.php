@@ -24,8 +24,20 @@
                                 <p>{{ $image->description}}</p>
                             </div>
                         <div class="likes mx-4 my-1">
-                            <img src="{{ asset('img/heart.png')}}" alt="">
-                            <h2 class="mt-2">Comentarios ({{ count($image->comments) }})</h2>
+                            <?php $user_like = false ?>
+                                @foreach ($image->likes as $like)
+                                    @if($like->user->id == Auth::user()->id)
+                                        <?php $user_like = true ?>
+                                    @endif
+                                @endforeach
+                                @if($user_like)
+                                    <img src="{{ asset('img/heartR.png')}}" data-id="{{$image->id}}" class="btn-dislike">
+                                @else
+                                    <img src="{{ asset('img/heart.png')}}" data-id="{{$image->id}}" class="btn-like">
+                                @endif
+                                    <span class="numberLikes">
+                                        {{ count($image->likes) }}
+                                    </span>
                             <hr>
                                 <form action="{{ route('comment.save')}}" method="post">
                                 @csrf
