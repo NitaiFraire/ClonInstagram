@@ -60,3 +60,15 @@
 
     margin-bottom: 0;
 }
+
+.numberLikes{
+
+    color: gray;
+    font-size: 15px; 
+}
+
+.btn-dislike,
+.btn-like{
+
+    cursor: pointer;
+}
