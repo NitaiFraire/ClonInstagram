@@ -55,3 +55,5 @@ Route::get('/like/{image_id}', 'LikeController@like')->name('like.save');
 
 // ruta para eliminar like
 Route::get('/disLike/{image_id}', 'LikeController@disLike')->name('like.delete');
+
+Route::get('likes', 'LikeController@index')->name('likes');
