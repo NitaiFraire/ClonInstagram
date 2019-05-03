@@ -69,7 +69,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Mi perfil</a>
+                                        <a class="dropdown-item" href="{{ route('profile', ['id' => Auth::user()->id]) }}">Mi perfil</a>
                                         <a class="dropdown-item" href="{{ route('config') }}">Configuración</a>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                                 onclick="event.preventDefault();
