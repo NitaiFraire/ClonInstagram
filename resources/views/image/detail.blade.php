@@ -38,6 +38,12 @@
                                     <span class="numberLikes">
                                         {{ count($image->likes) }}
                                     </span>
+                                    @if (Auth::user() && Auth::user()->id == $image->user->id)
+                                        <div class="actions">
+                                            <a href="" class="btn btn-sm btn-danger">Borrar</a>
+                                            <a href="" class="btn btn-sm btn-warning">Actualizar</a>
+                                        </div>      
+                                    @endif
                             <hr>
                                 <form action="{{ route('comment.save')}}" method="post">
                                 @csrf
