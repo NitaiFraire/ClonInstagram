@@ -72,3 +72,17 @@
 
     cursor: pointer;
 }
+
+.profile-user .container-avatar{
+
+    width: 200px;
+    height: 200px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.profile-user .container-avatar img{
+
+    height: 100%;
+    width: 100%;
+}
