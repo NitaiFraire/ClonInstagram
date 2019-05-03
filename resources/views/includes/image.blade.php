@@ -5,7 +5,7 @@
                 <img class="avatar" src="{{ route('user.avatar', ['fileName' => $image->user->image]) }}" alt="">
             </div>
         @endif
-            <a class="enlaceImg" href="{{ route('image.detail', ['id' => $image->id]) }}">
+            <a class="enlaceImg" href="{{ route('profile', ['id' => $image->user->id]) }}">
                 {{ '@' . $image->user->nick}}
             </a>
     </div>
@@ -34,7 +34,7 @@
             <span class="numberLikes">
                 {{ count($image->likes) }}
             </span>
-            <a href="#" class="btn btn-sm btn-secondary m-2 ml-3">Comentarios ({{ count($image->comments) }})</a>
+            <a href="{{ route('image.detail', ['id' => $image->id]) }}" class="btn btn-sm btn-secondary m-2 ml-3">Comentarios ({{ count($image->comments) }})</a>
         </div>
     </div>
 </div>
