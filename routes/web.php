@@ -68,3 +68,6 @@ Route::get('/imagen/editar/{id}', 'ImageController@edit')->name('image.edit');
 
 // ruta para procesar edicion de imagen
 Route::post('/imagen/update', 'ImageController@update')->name('image.update');
+
+//ruta para perfiles
+Route::get('/gente', 'UserController@index')->name('user.index');
