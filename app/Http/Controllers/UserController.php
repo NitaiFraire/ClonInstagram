@@ -12,9 +12,21 @@ use App\User;
 
 class UserController extends Controller{
 
-    public function index(){
+    public function index($search = null){
+
+        if(!empty($search)){
+
+            $users = User::where('nick', 'LIKE', '%'.$search.'%')->orderBy('id', 'desc')
+                         ->orWhere('name', 'LIKE', '%'.$search.'%')
+                         ->orWhere('surname', 'LIKE', '%'.$search.'%')
+                         ->paginate(5);
+
+        }else{
+
+            $users = User::orderBy('id', 'desc')->paginate(5);
+
+        }
         
-        $users = User::orderBy('id', 'desc')->paginate(5);
 
         return view('user.index', [
 
