@@ -66,3 +66,5 @@ Route::get('/imagen/delete/{id}', 'ImageController@delete')->name('image.delete'
 // ruta par aedicion de imagen
 Route::get('/imagen/editar/{id}', 'ImageController@edit')->name('image.edit');
 
+// ruta para procesar edicion de imagen
+Route::post('/imagen/update', 'ImageController@update')->name('image.update');
