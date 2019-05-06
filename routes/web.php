@@ -70,4 +70,4 @@ Route::get('/imagen/editar/{id}', 'ImageController@edit')->name('image.edit');
 Route::post('/imagen/update', 'ImageController@update')->name('image.update');
 
 //ruta para perfiles
-Route::get('/gente', 'UserController@index')->name('user.index');
+Route::get('/gente/{search?}', 'UserController@index')->name('user.index');
